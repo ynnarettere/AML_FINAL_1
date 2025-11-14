@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from tensorflow.keras.models import load_model
+from tensorflow import keras 
 from PIL import Image # Используем PIL (Pillow) для чтения изображения (она обычно устанавливается автоматически)
 
 # --- КОНСТАНТЫ ---
@@ -14,7 +14,7 @@ THRESHOLD = 0.70 # Минимальная уверенность для отоб
 @st.cache_resource
 def load_resources():
     try:
-        model = load_model(MODEL_PATH)
+        model = keras.models.load_model(MODEL_PATH)
         st.success("✅ Модель успешно загружена!")
     except Exception as e:
         st.error(f"❌ Ошибка при загрузке модели: {e}")
@@ -91,3 +91,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
