@@ -2,6 +2,6 @@ streamlit
 streamlit-webrtc
 numpy
 pandas
-tensorflow
-keras
+tensorflow==2.16.1
+keras==3.3.3
 opencv-python-headless
