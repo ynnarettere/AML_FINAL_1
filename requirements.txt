@@ -2,6 +2,7 @@ streamlit
 streamlit-webrtc
 numpy
 pandas
-tensorflow==2.16.1
-keras==3.3.3
 opencv-python-headless
+# Используем Keras 3.x с явно указанным бэкендом
+keras==3.3.3
+tensorflow-cpu==2.16.1
